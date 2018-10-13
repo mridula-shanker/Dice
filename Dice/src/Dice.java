@@ -7,7 +7,8 @@
 public class Dice 
 	{
 	private int numRolls;
-	
+	private int rollValue;
+
 	public Dice()
 	{
 		numRolls=0;
@@ -16,8 +17,9 @@ public class Dice
 	public int roll()
 	{
 		numRolls++;
-		int roll = (int)(Math.random()*6+1);
-		return roll;
+		rollValue = (int)(Math.random()*6+1);
+		return rollValue;
+
 	}
 	
 	public void reset()
@@ -30,6 +32,10 @@ public class Dice
 		return numRolls;
 	}
 	
+	public int getRollValue()
+	{
+		return rollValue;
+	}
 }
 
 
